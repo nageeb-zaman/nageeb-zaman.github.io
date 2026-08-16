@@ -1,5 +1,5 @@
 /* ====================================================== */
-/* --- HERO SECTION (LAYOUT ĐÃ SỬA LỖI) --- */
+/* --- HERO SECTION (LAYOUT) --- */
 /* ====================================================== */
 .hero-section {
     min-height: 100vh;
@@ -7,17 +7,17 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-top: 8rem;
+    padding-top: 1rem;
 }
 
 .hero-background {
     position: absolute;
     inset: 0;
-    background-image: url('../../assets/wallpaper5.webp');
+    background-image: url('../../assets/Tarantula_nebula.png');
     background-size: cover;
     background-position: center;
     z-index: -2;
-    opacity: 0.8;
+    opacity: 1.0;
     overflow: hidden;
     will-change: transform;
 }
@@ -41,8 +41,8 @@
 }
 
 .shape-1 {
-    width: 400px;
-    height: 400px;
+    width: 230px;
+    height: 230px;
     background: var(--gradient-purple);
     top: -10%;
     left: -10%;
@@ -64,23 +64,28 @@
     left: 45%;
 }
 
-/* SỬA LỖI: Chuyển sang CSS Grid để layout ổn định */
+/* BUG FIX: Switch to CSS Grid for stable layout. */
 .hero-container {
     display: grid;
-    grid-template-columns: 340px auto;
-    /* Cột 1 cho card, cột 2 cho text */
+    /* grid-template-columns: 500px auto; */
+    grid-template-columns: 500px 1fr;
+    /* Column 1 for card, column 2 for text. */
     align-items: center;
-    /* Căn giữa các item theo chiều dọc */
+    /* Center the items vertically. */
     gap: 3rem;
-    /* Tăng khoảng cách giữa card và text */
+    /*Increase the spacing between the card and the text. */
     width: 100%;
     position: relative;
 }
 
-/* SỬA LỖI: Bỏ position absolute */
+/* BUG FIX:  position absolute */
 .profile-card-container {
-    width: 340px;
-    will-change: transform;
+    /* position: absolute; */
+    width: 500px;
+    height: 400px;
+    /* left: -10%; */
+    transform: translateX(-80px);
+    /* will-change: transform; */
 }
 
 .profile-card .profile-header {
@@ -94,14 +99,14 @@
 }
 
 .avatar {
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 50%;
+    width: 10.5rem;
+    height: 10.5rem;
+    border-radius: 20%;
     object-fit: cover;
     border: 2px solid var(--gradient-purple);
 }
 
-.status-indicator.online {
+/* .status-indicator.online {
     position: absolute;
     bottom: 2px;
     right: 2px;
@@ -110,7 +115,7 @@
     background-color: #22c55e;
     border-radius: 50%;
     border: 3px solid var(--bg-card);
-}
+} */
 
 .job-title {
     color: var(--text-secondary);
@@ -159,7 +164,7 @@
     line-height: 1;
 }
 
-/* SỬA LỖI: Chuyển text-align sang left và bỏ margin auto */
+/* BUG FIX: Switch text-align to left and remove margin auto */
 .hero-text-content {
     text-align: left;
     max-width: 800px;
