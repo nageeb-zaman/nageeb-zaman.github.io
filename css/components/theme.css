@@ -1,11 +1,11 @@
 /* ====================================================== */
-/* --- BỔ SUNG: LIGHT/DARK MODE & NÚT CHUYỂN THEME --- */
+/*--- ADDITION: LIGHT/DARK MODE & THEME SWITCH BUTTON ---
 /* ====================================================== */
 
 
 
 
-/* --- Style cho Nút Chuyển Theme --- */
+/* --- Style for Theme Switch Button --- */
 .theme-toggle-btn {
     background: none;
     border: 1px solid var(--border-color);
@@ -18,7 +18,7 @@
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
-    /* Đảm bảo nút không bị co lại */
+    /* Make sure the button is not shrunk */
     transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -38,7 +38,7 @@ body.light-mode .theme-toggle-btn:hover {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* Trạng thái Dark (mặc định): Hiện mặt trăng, ẩn mặt trời */
+/* Dark state (default): Show the moon, hide the sun */
 .theme-toggle-btn .fa-moon {
     transform: translate(-50%, -50%);
     opacity: 1;
@@ -49,7 +49,7 @@ body.light-mode .theme-toggle-btn:hover {
     opacity: 0;
 }
 
-/* Trạng thái Light: Ẩn mặt trăng, hiện mặt trời */
+/* Light status: Hide the moon, show the sun */
 body.light-mode .theme-toggle-btn .fa-moon {
     transform: translate(-50%, 150%);
     opacity: 0;
@@ -61,14 +61,14 @@ body.light-mode .theme-toggle-btn .fa-sun {
 }
 
 
-/* --- Các điều chỉnh cho Light Mode --- */
+/* --- Light Mode adjustments --- */
 body.light-mode .main-header {
     background: rgba(255, 255, 255, 0.8);
 }
 
 body.light-mode .resume-button {
     color: #f4f4f5;
-    /* Chữ trắng */
+    /* White letters */
 }
 
 body.light-mode .main-nav a.is-active {
@@ -103,28 +103,28 @@ body.light-mode .contact-form textarea {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Đổi màu cho các tiêu đề phụ như "General Expertise", "Soft Skills"... */
+/* Change the color of subheadings like "General Expertise", "Soft Skills"... */
 body.light-mode .skills-subtitle {
     color: #6200ee;
-    /* Một màu tím đậm, dễ đọc trên nền trắng */
+    /* A deep purple, easy to read on a white background */
 }
 
-/* Đổi màu cho từng ô kỹ năng (pill/tag) */
+/* Change color for each skill box (pill/tag) */
 body.light-mode .grid-item {
     background-color: rgba(0, 0, 0, 0.05);
-    /* Nền xám nhạt */
+    /* Light gray background */
     border-color: rgba(0, 0, 0, 0.1);
     color: var(--text-secondary);
-    /* Chữ màu xám đậm, kế thừa từ biến màu */
+    /* Dark gray text, inherited from discoloration */
 }
 
-/* Đổi màu cho hiệu ứng hover của ô kỹ năng */
+/* Change the color of the skill box's hover effect */
 body.light-mode .grid-item:hover {
     color: var(--text-primary);
-    /* Chữ màu đen */
+    /* Black letters */
     border-color: #007bff;
-    /* Viền xanh dương đậm hơn */
+    /* Darker blue border */
     background-color: rgba(0, 123, 255, 0.1);
-    /* Nền xanh dương nhạt */
+    /* Light blue background */
     box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
 }

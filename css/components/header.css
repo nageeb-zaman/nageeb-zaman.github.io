@@ -1,12 +1,13 @@
 /* ====================================================== */
-/* --- THANH TIẾN TRÌNH & HEADER --- */
+/* --- PROGRESS BAR & HEADER --- */
 /* ====================================================== */
 .scroll-progress-bar {
     position: fixed;
     top: 0;
     left: 0;
     height: 4px;
-    background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink));
+    /* background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink)); */
+    background: linear-gradient(to right, #009000, #39FF14);
     width: 0%;
     z-index: 1000;
     transition: width 0.1s linear;
@@ -29,9 +30,9 @@
     display: flex;
     align-items: center;
 
-    /* === CĂN CHỈNH KHOẢNG CÁCH === */
+    /* === ALIGN DISTANCE === */
     justify-content: space-between;
-    /* Dùng space-between để Logo và Nav tách ra hai bên */
+    /* Use space-between to separate the Logo and Nav on both sides */
 
     gap: 1rem;
     opacity: 0;
@@ -39,20 +40,19 @@
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* === THAY ĐỔI LOGO THEO THIẾT KẾ MỚI === */
+/* === CHANGE LOGO TO NEW DESIGN === */
 .logo {
     font-weight: bold;
     font-size: 1.25rem;
-    color: var(--text-primary);
-    /* Chuyển màu gradient sang một phần của tên */
-    background: linear-gradient(to right, #a855f7, #ec4899);
-    /* Tím-Hồng */
+    color: var(--gradient-green);
+    /* Gradient color transfer to part of the name */
+    background: linear-gradient(to right, #0BDA51, var(--gradient-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 
-/* === THÊM KHỐI NÀY === */
+/* === ADD THIS BLOCK === */
 .header-logo-group {
     display: flex;
     align-items: center;
@@ -65,43 +65,14 @@
     gap: 1.5rem;
 }
 
-/* GitHub Stars Badge */
-.github-stars-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
-    padding: 0.4rem 0.8rem;
-    border-radius: 9999px;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
 
-.github-stars-badge:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--gradient-purple);
-    transform: translateY(-2px);
-}
-
-.github-stars-badge i.fa-github {
-    font-size: 1rem;
-}
-
-.github-stars-badge i.fa-star {
-    font-size: 0.8rem;
-    animation: pulse-star 2s infinite ease-in-out;
-}
 
 @keyframes pulse-star {
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.2); opacity: 0.8; }
 }
 
-/* Các style khác cho .main-nav, .resume-button... giữ nguyên */
+/* Other styles for .main-nav, .resume-button... remain the same */
 
 
 .main-header.visible {
@@ -111,13 +82,14 @@
 
 .logo {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.25rem;    /* Nageeb: font size for the name in the header/banner */
     text-decoration: none;
     color: var(--text-primary);
 }
 
 .logo span {
-    background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink));
+    background: linear-gradient(to right, #009000, #39FF14);
+    padding: 0.5rem 1rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -129,7 +101,7 @@
 .main-nav a {
     position: relative;
     z-index: 1;
-    /* Đảm bảo link luôn nằm trên indicator */
+    /* Make sure the link is always on the indicator */
     padding: 0.5rem 1rem;
     color: var(--text-secondary);
     text-decoration: none;
@@ -138,28 +110,28 @@
 }
 
 .main-nav a:hover {
-    color: var(--text-primary);
+    color: var(--gradient-green);
 }
 
 .main-nav a.is-active {
-    /* Thêm một class để highlight text khi active */
+    /* Add a class to highlight text when active */
     color: var(--text-primary);
 }
 
-/* Style cho vạch active di chuyển */
+/* Style for active line to move */
 .nav-indicator {
     position: absolute;
     bottom: 0;
     left: 0;
-    /* JS sẽ cập nhật giá trị này */
+    /* JS will update this value */
     height: 100%;
     background-color: rgba(0, 247, 255, 0.1);
     border-radius: 9999px;
     z-index: 0;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    /* Hiệu ứng mượt mà */
+    /* Smooth effect */
     opacity: 0;
-    /* Ban đầu ẩn đi */
+    /* Initially hidden */
 }
 
 .resume-button {
@@ -175,4 +147,5 @@
 
 .resume-button:hover {
     transform: scale(1.05);
+    color: #121212;
 }

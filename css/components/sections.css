@@ -29,7 +29,7 @@
 .title-underline {
     width: 6rem;
     height: 4px;
-    background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink));
+    background: linear-gradient(to right, #009000, #39FF14);
     border-radius: 9999px;
     margin: 0.75rem auto 0 auto;
 }

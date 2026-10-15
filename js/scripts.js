@@ -108,7 +108,7 @@ window.fetchGitHubStars = async function() {
     if (!starCountElement) return;
 
     try {
-        const repo = 'TranHuuDat2004/TranHuuDat2004.github.io';
+        const repo = 'nageeb-zaman/nageeb-zaman.github.io';
         const response = await fetch(`https://api.github.com/repos/${repo}`);
         if (response.ok) {
             const data = await response.json();

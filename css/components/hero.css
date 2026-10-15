@@ -43,7 +43,7 @@
 .shape-1 {
     width: 230px;
     height: 230px;
-    background: var(--gradient-purple);
+    background: var(--gradient-green);
     top: -10%;
     left: -10%;
 }
@@ -51,7 +51,7 @@
 .shape-2 {
     width: 300px;
     height: 300px;
-    background: var(--gradient-pink);
+    background: var(--gradient-green);
     bottom: 10%;
     right: -5%;
 }
@@ -103,7 +103,7 @@
     height: 10.5rem;
     border-radius: 20%;
     object-fit: cover;
-    border: 2px solid var(--gradient-purple);
+    border: 2px solid var(--gradient-green);
 }
 
 /* .status-indicator.online {
@@ -190,7 +190,7 @@
 }
 
 .gradient-text {
-    background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink));
+    background: linear-gradient(to right, #009000, #39FF14);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -202,9 +202,9 @@
     margin: 0;
 }
 
-/* Bỏ margin auto */
+/* Remove margin auto */
 
-/* SỬA LỖI: Căn lề trái cho các nút */
+/* BUGFIX: Left alignment for buttons */
 .hero-buttons {
     margin-top: 2rem;
     display: flex;
@@ -226,11 +226,13 @@
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--gradient-green);
 }
 
 .btn-primary {
-    background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink));
-    color: white;
+    background: rgba(255, 255, 255, 0.1);;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
 }
 
 .btn-secondary {
@@ -239,7 +241,7 @@
     color: var(--text-primary);
 }
 
-/* SỬA LỖI: Căn lề trái cho các icon social */
+/* BUGFIX: Left alignment for social icons */
 .social-links {
     margin-top: 2.5rem;
     display: flex;
@@ -256,13 +258,14 @@
     place-items: center;
     border-radius: 50%;
     border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.2);
     transition: all 0.3s;
 }
 
 .social-links a:hover {
-    color: var(--text-primary);
+    color: var(--gradient-green);
     background-color: rgba(255, 255, 255, 0.1);
-    border-color: var(--gradient-purple);
+    border-color: var(--gradient-green);
 }
 
 .scroll-down-indicator {
@@ -307,4 +310,222 @@
     100% {
         opacity: 0;
     }
+}
+
+/* ====================================================== */
+/* --- RESPONSIVE FIX: keep hero inside the screen on phones/tablets --- */
+/* ====================================================== */
+@media (max-width: 992px) {
+    .hero-section .hero-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-section .profile-card-container {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        transform: none;
+    }
+
+    .hero-section .hero-text-content {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section .hero-text-content h1 {
+        font-size: clamp(2.25rem, 11vw, 3rem);
+    }
+
+    .hero-section .hero-text-content p {
+        font-size: 1.15rem !important;
+    }
+
+    .hero-section .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .hero-section .profile-card .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section .avatar {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+/* ====================================================== */
+/* --- FRONT PAGE REFRESH (Oct 2026) --- */
+/* ====================================================== */
+.welcome-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gradient-green);
+    box-shadow: 0 0 8px var(--gradient-green);
+}
+
+.hero-text-content .hero-tagline {
+    color: #fff;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    max-width: 640px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+}
+
+.hero-stats {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 2rem;
+    max-width: 680px;
+}
+
+.hero-stats li {
+    background: rgba(18, 18, 18, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 0.75rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.hero-stats strong {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--gradient-green);
+    line-height: 1.1;
+}
+
+.hero-stats span {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: #d4d4d8;
+}
+
+.hero-buttons .btn-primary {
+    background: var(--gradient-green);
+    border-color: var(--gradient-green);
+    color: #0b0b0c;
+}
+
+.hero-buttons .btn-primary:hover {
+    color: #0b0b0c;
+    box-shadow: 0 4px 20px rgba(74, 222, 128, 0.35);
+}
+
+.social-links a {
+    color: #fff;
+}
+
+.profile-details a {
+    color: var(--text-primary);
+}
+
+@media (max-width: 992px) {
+    .hero-stats {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+    .hero-text-content .hero-tagline {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .hero-section .hero-text-content .hero-tagline {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Mid-size screens (small laptops / tablets landscape): keep card + text inside the screen */
+@media (min-width: 993px) and (max-width: 1280px) {
+    .hero-section .hero-container {
+        grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+        gap: 2rem;
+    }
+    .hero-section .profile-card-container {
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+    .hero-section .avatar {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section .scroll-down-indicator {
+        display: none;
+    }
+    .hero-section {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1280px) {
+    .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .hero-section .scroll-down-indicator {
+        display: none;
+    }
+}
+
+/* Social buttons: green icons, more visible */
+.hero-section .social-links a {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+    color: var(--gradient-green);
+    background-color: rgba(18, 18, 18, 0.6);
+    border: 1px solid rgba(74, 222, 128, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.hero-section .social-links a:hover {
+    color: #0b0b0c;
+    background-color: var(--gradient-green);
+    border-color: var(--gradient-green);
+    box-shadow: 0 0 14px rgba(74, 222, 128, 0.45);
+}
+
+/* Keep the nebula inside the hero: the parallax script slides the
+   background down while scrolling, so clip it at the section edge
+   and fade it softly into the page color. */
+.hero-section {
+    overflow: hidden;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0), var(--bg-dark));
+    z-index: -1;
+    pointer-events: none;
 }

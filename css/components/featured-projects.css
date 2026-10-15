@@ -26,11 +26,11 @@
 
 /* --- The Main Card (Showcase) --- */
 .showcase-card {
-    background-color: #ffffff;
+    background-color: #adabab;
     color: #121212;
     border-radius: 1.5rem;
-    padding: 2.5rem;
-    border-top: 8px solid var(--gradient-purple);
+    padding: 0.5rem;
+    border-top: 8px solid var(--gradient-green);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -42,8 +42,8 @@
 
 .showcase-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    /* gap: 2rem; */
     align-items: center;
 }
 
@@ -86,6 +86,27 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
+.project-paper-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: -2.0rem;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid #22C55E;
+    border-radius: 1.5rem;
+    color: #22C55E;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.project-paper-link:hover {
+    background: #22C55E;
+    color: white;
+    transform: translateY(-2px);
+}
+
 /* --- Figma Embed Styles --- */
 .figma-embed-container {
     position: relative;
@@ -113,6 +134,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    text-align: right;
 }
 
 .details-column h2 {
@@ -129,11 +151,20 @@
     margin-top: -1.5rem;
 }
 
+.details-column .project-affiliation {
+    color: var(--text-secondary);
+    font-weight: 200;
+    text-align: right;
+    margin-top: -1.5rem;
+    margin-bottom: 0.01rem;
+}
+
 .project-tags {
     display: flex;
     justify-content: flex-end;
     gap: 0.75rem;
     flex-wrap: wrap;
+    margin-top: -0.5rem;
 }
 
 .project-tags span {
@@ -146,9 +177,10 @@
 }
 
 .description-box {
-    padding: 1.5rem;
+    padding: 0.5rem;
     color: var(--text-secondary);
-    text-align: right;
+    text-align: left;
+    margin-top: -0.5rem;
 }
 
 .project-links {
@@ -156,37 +188,38 @@
     justify-content: flex-end;
     gap: 1rem;
     font-size: 1.25rem;
+    /* margin-top: -0.5rem; */
 }
 
 /* --- STYLES FOR THE REVERSED LAYOUT --- */
 .layout-reversed {
-    grid-template-columns: 1fr 2fr;
-    /* Đảo ngược tỉ lệ cột */
+    grid-template-columns: 1.5fr 1.5fr;
+    /* Reverse column ratio */
 }
 
 .layout-reversed .showcase-card {
     grid-column: 2 / 3;
-    /* Chuyển card sang cột 2 */
+    /* Move card to column 2 */
     grid-row: 1 / 2;
 }
 
 .layout-reversed .details-column {
     grid-column: 1 / 2;
-    /* Chuyển details sang cột 1 */
+    /* Move details to column 1 */
     grid-row: 1 / 2;
 }
 
 .layout-reversed .details-column h2,
 .layout-reversed .details-column .project-category,
 .layout-reversed .description-box {
-    text-align: left;
-    /* Đổi hướng text */
+    text-align: right;
+    /* Change text direction */
 }
 
 .layout-reversed .project-tags,
 .layout-reversed .project-links {
-    justify-content: flex-start;
-    /* Đổi hướng các nút */
+    justify-content: flex-end;
+    /* Redirect buttons */
 }
 
 
@@ -196,12 +229,12 @@
     .project-showcase-grid,
     .layout-reversed {
         grid-template-columns: 1fr;
-        /* Chuyển tất cả về 1 cột */
+        /*Move everything to one column. */
     }
 
     .layout-reversed .showcase-card,
     .layout-reversed .details-column {
-        /* Reset lại vị trí cột trên mobile */
+        /* Reset column position on mobile */
         grid-column: auto;
         grid-row: auto;
     }
@@ -225,8 +258,12 @@
     .project-tags,
     .project-links,
     .layout-reversed .project-tags,
-    .layout-reversed .project-links {
+    .layout-reversed {
         justify-content: center;
         /* Căn giữa tất cả nút */
+    }
+    .layout-reversed .project-links {
+        justify-content: center;
+        /* margin-top: -0.5rem; */
     }
 }

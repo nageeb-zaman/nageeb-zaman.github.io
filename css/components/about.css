@@ -17,6 +17,9 @@
 .about-image-wrapper img {
     width: 100%;
     display: block;
+    margin-bottom: 3.0rem;
+    border-radius: 16px;
+    border: 2px solid var(--gradient-green);
 }
 
 .status-tag {
@@ -32,13 +35,6 @@
     align-items: center;
     gap: 0.5rem;
     border: 1px solid var(--border-color);
-}
-
-.green-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--gradient-green);
-    border-radius: 50%;
 }
 
 .about-text-content p {
@@ -90,4 +86,64 @@
 
 .btn-download-resume:hover {
     background-color: rgba(255, 255, 255, 0.15);
+}
+/* --- Photo captions & highlight list (Oct 2026) --- */
+.about-photo {
+    margin: 0 0 2rem 0;
+}
+
+.about-image-wrapper .about-photo img {
+    margin-bottom: 0.6rem;
+}
+
+.about-photo figcaption {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    text-align: center;
+}
+
+.about-highlights {
+    list-style: none;
+    margin: 0 0 1.25rem 0;
+    padding: 0;
+}
+
+.about-highlights li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.about-highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0.25rem;
+    top: 0.65em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gradient-green);
+}
+
+.about-highlights strong {
+    color: var(--gradient-green);
+    font-weight: 600;
+}
+
+.info-box p a {
+    color: var(--text-primary);
+    overflow-wrap: anywhere;
+}
+
+.info-box p a:hover {
+    color: var(--gradient-green);
+}
+
+@media (max-width: 480px) {
+    .info-box {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }

@@ -1,259 +1,548 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Khám phá các dự án lập trình và thiết kế của Trần Hữu Đạt, từ các nền tảng thương mại điện tử Omacha Shop, BrickShop đến các công cụ học tập tương tác như Aptis Practice." />
-    <title>My Projects | Trần Hữu Đạt</title>
-    <link rel="canonical" href="https://tranhuudat2004.github.io/project.html" />
+    <meta name="description" content="Nageeb Zaman is a computational scientist and physics PhD candidate at Louisiana State University who builds and runs large-scale simulations of supernovae, high-performance computing codes, and data-analysis pipelines." />
+        <title>Research Projects | Nageeb Zaman</title>
+    <link rel="canonical" href="https://nageeb-zaman.github.io/project.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="My Projects | Trần Hữu Đạt">
-    <meta property="og:description" content="Khám phá các dự án lập trình và thiết kế của Trần Hữu Đạt, từ các nền tảng thương mại điện tử Omacha Shop, BrickShop đến các công cụ học tập tương tác như Aptis Practice.">
-    <meta property="og:url" content="https://tranhuudat2004.github.io/project.html">
-    <meta property="og:image" content="https://tranhuudat2004.github.io/assets/images/banner-cua-ban.jpg">
+    <meta property="og:title" content="Research Projects | Nageeb Zaman">
+    <meta property="og:description" content="Nageeb Zaman is a computational scientist and physics PhD candidate at Louisiana State University who builds and runs large-scale simulations of supernovae, high-performance computing codes, and data-analysis pipelines.">
+    <meta property="og:url" content="https://nageeb-zaman.github.io/project.html">
+    <meta property="og:image" content="https://nageeb-zaman.github.io/assets/Nageeb_Zaman.jpg">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="My Projects | Trần Hữu Đạt">
-    <meta name="twitter:description" content="Khám phá các dự án lập trình và thiết kế của Trần Hữu Đạt, từ các nền tảng thương mại điện tử Omacha Shop, BrickShop đến các công cụ học tập tương tác như Aptis Practice.">
-    <meta name="twitter:image" content="https://tranhuudat2004.github.io/assets/images/banner-cua-ban.jpg">
+    <!-- Browser Tab Icon -->
+    <link rel="icon" type="image/png" href="assets/Tab_Icon.png" />
 
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-
-    <!-- Google Fonts -->
+    <!-- ADD NEW FONTS FROM GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Link CSS của bạn -->
+    <!-- LINK CSS FONT AWESOME -->
     <link rel="stylesheet" href="css/components/base.css" />
     <link rel="stylesheet" href="css/components/header.css" />
     <link rel="stylesheet" href="css/components/hero.css" />
-    <link rel="stylesheet" href="css/components/music-player.css" />
     <link rel="stylesheet" href="css/components/sections.css" />
     <link rel="stylesheet" href="css/components/about.css" />
     <link rel="stylesheet" href="css/components/skills.css" />
     <link rel="stylesheet" href="css/components/projects.css" />
-    <link rel="stylesheet" href="css/components/blog.css" />
     <link rel="stylesheet" href="css/components/experience.css" />
     <link rel="stylesheet" href="css/components/contact.css" />
     <link rel="stylesheet" href="css/components/animations.css" />
     <link rel="stylesheet" href="css/components/awards.css" />
     <link rel="stylesheet" href="css/components/footer.css" />
-    <link rel="stylesheet" href="css/components/wakatime.css" />
     <link rel="stylesheet" href="css/components/featured-projects.css" />
     <link rel="stylesheet" href="css/components/interactive-skills.css" />
     <link rel="stylesheet" href="css/components/theme.css" />
-    <link rel="stylesheet" href="css/projects-page.css" />
+    <link rel="stylesheet" href="css/components/case-study.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .theme-switcher-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: background-color 0.3s, border-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dropdown-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-card);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 0;
+            right: 0;
+            bottom: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .dropdown-menu a {
+            color: var(--text-primary);
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Thanh tiến trình cuộn -->
     <div class="scroll-progress-bar"></div>
-
-    <!-- Header hiện đại (đã cập nhật link) -->
     <header id="header-placeholder" class="main-header"></header>
-    <!-- ====================================================== -->
-    <!-- Music Player Widget -->
-    <!-- ====================================================== -->
-    <div class="music-player-widget">
-        <img src="assets/song-cover.png" alt="Song Cover" class="song-cover" id="song-cover">
-        <div class="song-info">
-            <h4 id="song-title">Điều chưa nói</h4>
-            <p id="song-artist">Tia ft. OMIXX</p>
-        </div>
-        <div class="player-controls">
-            <!-- Thêm ID cho các nút -->
-            <i class="fas fa-backward-step" id="prev-btn"></i>
-            <i class="fas fa-pause" id="play-pause-btn"></i> <!-- Bắt đầu với icon pause -->
-            <i class="fas fa-forward-step" id="next-btn"></i>
-        </div>
-        <i class="fas fa-volume-high"></i> <!-- Phần volume sẽ làm sau nếu bạn muốn -->
-    </div>
 
-    <main class="page-wrapper">
-        <!-- <section class="projects-hero">
-            <div class="hero-background"></div>
-            <div class="container hero-container">
-                <div class="hero-text-content animate-on-scroll">
-                    <div class="welcome-badge">Portfolio Highlights</div>
-                    <h1 class="animate-on-scroll">
-                        My Creative<br>
-                        <span class="gradient-text">Journey</span>
-                    </h1>
-                    <p class="animate-on-scroll">A collection of web applications, experiments, and interactive tools built with passion and code.</p>
-                    <div class="hero-buttons">
-                        <a href="index.html" class="btn btn-secondary">
-                            <i class="fas fa-arrow-left"></i> Back to Home
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <section id="projects" class="content-section">
-            <div class="section-header animate-on-scroll">
-                <div class="section-badge">Gallery</div>
-                <h2 class="section-title">All Projects</h2>
-                <div class="title-underline"></div>
-            </div>
-
-            <!-- Grid Container for Projects -->
+    <main>
+        <section class="content-section cs-page">
             <div class="container">
-                <div class="blog-grid">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-badge">Research &amp; technical work in detail</div>
+                    <h2 class="section-title">Projects &amp; Research</h2>
+                    <div class="title-underline"></div>
+                    <p class="cs-intro">Five projects in computational astrophysics, high-performance computing and
+                        electronic-structure theory. Each one covers the question, the methods, the results and my part in it.</p>
+                </div>
 
-                    <!-- PROJECT 1: Omacha Shop -->
-                    <div class="blog-post-card glass-card animate-on-scroll">
-                        <div class="blog-card-image">
-                            <img src="assets/banner_omacha.png" alt="Omacha Homepage">
+                <div class="cs-layout">
+                    <nav class="cs-nav" aria-label="Projects on this page">
+                        <p class="cs-nav-title">On this page</p>
+                        <a href="#csm-supernovae"><span class="cs-num">01</span> Interacting supernovae</a>
+                        <a href="#arespk-lanl"><span class="cs-num">02</span> AresPK at Los Alamos</a>
+                        <a href="#rotating-ppisn"><span class="cs-num">03</span> Rotating massive stars</a>
+                        <a href="#slsn-powering"><span class="cs-num">04</span> Powering superluminous SNe</a>
+                        <a href="#flosic-thesis"><span class="cs-num">05</span> M.S. thesis: FLO-SIC</a>
+                    </nav>
+                    <div class="cs-articles">
+                <article id="csm-supernovae" class="case-study glass-card animate-on-scroll">
+                    <header class="cs-header">
+                        <p class="cs-eyebrow"><span class="cs-num">01</span> When exploding stars crash into their own gas</p>
+                        <h2>Circumstellar Interaction in Hydrogen-poor Supernovae</h2>
+                        <p class="cs-meta"><span>First author</span><span class="cs-meta-sep">&middot;</span><span>Louisiana State University</span><span class="cs-meta-sep">&middot;</span><span>Advisor: Dr. Emmanouil Chatzopoulos</span><span class="cs-meta-sep">&middot;</span><span>2022&ndash;2026</span></p>
+                    </header>
+                    <dl class="cs-facts">
+                        <div><dt>Codes</dt><dd>MESA &middot; STELLA &middot; SuperLite &middot; Duperfit &middot; Python</dd></div>
+                        <div><dt>Scale</dt><dd>30 models: 1 baseline, 13 wind, 9 inner-shell, 4 detached-shell and 3 hydrogen-rich variants</dd></div>
+                        <div><dt>Output</dt><dd>First-author paper under review at <em>ApJ</em> &middot; talk on an earlier version at AAS 243</dd></div>
+                    </dl>
+                    <div class="cs-body">
+                        <h3>The question</h3>
+                        <p>Hydrogen-poor explosions come in many forms: normal Type Ib/c supernovae, interacting Ibn/Icn-like
+            events, fast blue optical transients (FBOTs), fast-evolving luminous transients (FELTs) and Type I
+            superluminous supernovae (SLSNe-I), which can be 10&ndash;100&times; brighter than normal. Collision of
+            the ejecta with circumstellar material (CSM) that the star lost before exploding is one way to power the
+            bright end. I asked how the structure, extent and composition of that CSM move a single stripped-envelope
+            explosion across this landscape, and whether any configuration matches both the light curves
+            <em>and</em> the spectra.</p>
+                        <h3>Approach</h3>
+                        <ul class="cs-list">
+                            <li>Produced a hydrogen-free progenitor self-consistently through binary mass transfer in <b>MESA</b>, evolved it to core collapse and exploded it.</li>
+                            <li>Built a <b>30-model grid</b> of CSM environments: steady winds, compact shells next to the star, massive detached shells at ~10<sup>15</sup>&nbsp;cm, and hydrogen-rich control versions.</li>
+                            <li>Computed light curves with the radiation-hydrodynamics code <b>STELLA</b> and synthetic spectra with the Monte Carlo radiative-transfer code <b>SuperLite</b>.</li>
+                            <li>Compared models and observed transients using the same light-curve metrics, the brightness&ndash;timescale&ndash;temperature&ndash;radius (BTTR) diagram, and <b>Duperfit</b> template matching.</li>
+                        </ul>
+                        <h3>My contribution</h3>
+                        <p>This is my project from start to finish, carried out under my advisor&rsquo;s guidance: I built the binary progenitor and all 30 CSM models, ran every simulation on LSU&rsquo;s HPC clusters, wrote the Python analysis pipeline, and wrote the paper.</p>
+                    </div>
+                    
+                    
+                    <div class="cs-links">
+                        <span class="cs-link cs-link--muted"><i class="fas fa-hourglass-half"></i> Under review at ApJ &middot; results and figures will be added after publication</span>
+                        <a class="cs-link" href="https://github.com/nageeb-zaman/sn-csm-modeling" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code on GitHub</a>
+                    </div>
+                </article>
+                <article id="arespk-lanl" class="case-study glass-card animate-on-scroll">
+                    <header class="cs-header">
+                        <p class="cs-eyebrow"><span class="cs-num">02</span> Supernova code for GPU supercomputers</p>
+                        <h2>AresPK &ndash; Simulating Type Ia Supernovae on Heterogeneous HPC Architectures</h2>
+                        <p class="cs-meta"><span>Co-Design Summer School, summer 2023</span><span class="cs-meta-sep">&middot;</span><span>Los Alamos National Laboratory (CCS-7, now CAI-1)</span><span class="cs-meta-sep">&middot;</span><span>Team of 4: L.&nbsp;Dyken, A.&nbsp;Holas, M.&nbsp;I.&nbsp;Ugalino, N.&nbsp;Zaman</span></p>
+                    </header>
+                    <dl class="cs-facts">
+                        <div><dt>Stack</dt><dd>C++ &middot; Kokkos &middot; Parthenon (AMR) &middot; MPI &middot; Python</dd></div>
+                        <div><dt>Hardware</dt><dd>Chicoma supercomputer: AMD EPYC CPUs and NVIDIA A100 GPUs</dd></div>
+                        <div><dt>Output</dt><dd>Poster LA-UR-23-29212 &middot; open-source code</dd></div>
+                    </dl>
+                    <div class="cs-body">
+                        <h3>The question</h3>
+                        <p>Type Ia supernovae are thermonuclear explosions of white dwarfs and are used as standardizable
+            distance markers in cosmology. Simulating them means resolving physics over many orders of magnitude in
+            length scale, which calls for adaptive mesh refinement (AMR) and very large machines. Most existing
+            codes were written for CPU-only systems, while new supercomputers get most of their power from GPUs.
+            Our goal was a performance-portable code that runs efficiently on both.</p>
+                        <h3>Approach</h3>
+                        <ul class="cs-list">
+                            <li>Built AresPK on the <b>Parthenon</b> AMR framework and <b>AthenaPK</b> hydrodynamics, with <b>Kokkos</b> providing a single code base for CPUs and GPUs.</li>
+                            <li>Added the physics needed for thermonuclear explosions: a <b>nuclear statistical equilibrium (NSE) burning solver</b>, a <b>monopole self-gravity</b> solver, and the <b>Helmholtz equation of state</b>, the first implementation of it to run on GPUs.</li>
+                            <li>Ran strong- and weak-scaling studies on Chicoma, varying MPI ranks, CPU cores and GPUs.</li>
+                        </ul>
+                        <h3>Key results</h3>
+                        <ul class="cs-list cs-list--results">
+                            <li><b>Perfect strong-scaling speedup up to 8 GPUs</b>, and near-linear scaling for both CPU and GPU ranks.</li>
+                            <li>On average, a rank with <b>one A100 GPU was 34% faster</b> than a rank with 64 CPU cores.</li>
+                            <li>Scaled to a <b>1024&sup3; mesh on 512 CPU ranks (32,768 cores)</b>; weak-scaling efficiency dropped by about 55% at that largest scale, pointing to global communication as the next bottleneck.</li>
+                        </ul>
+                        <h3>My contribution</h3>
+                        <p>Wrote and validated the NSE burning solver, helped integrate the physics modules, and contributed to the scaling studies on Chicoma.</p>
+                    </div>
+                    <div class="cs-figures">
+                        <figure class="cs-figure">
+                            <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                <img src="assets/project_4/SCPoster_web.jpg" alt="Research poster for AresPK, Los Alamos Co-Design Summer School 2023." loading="lazy">
+                            </button>
+                            <figcaption>Poster presented at the end of the 2023 Co-Design Summer School (LA-UR-23-29212). Click to enlarge.</figcaption>
+                        </figure>
+                    </div>
+                    <details class="cs-deep">
+                        <summary><span>Technical deep dive</span><i class="fas fa-chevron-down"></i></summary>
+                        <div class="cs-deep-body">
+                        <h4>Why performance portability</h4>
+                        <p>A white dwarf is thousands of kilometres across, while the burning front that unbinds it is
+             orders of magnitude thinner. AMR concentrates resolution where it is needed, but even then the runs need
+             leadership-class machines, and those are increasingly GPU-based. Rather than maintain separate CPU and GPU
+             versions, AresPK is written once against Kokkos, which compiles the same kernels for OpenMP on CPUs or
+             CUDA on GPUs. Parthenon handles the block-structured mesh, load balancing and MPI communication.</p>
+                        <h4>Physics modules</h4>
+                        <ul class="cs-list">
+                <li><b>NSE burning solver (my contribution):</b> computes the equilibrium isotope mass fractions of
+                burning material, checked for densities around 10<sup>7</sup>&nbsp;g&nbsp;cm<sup>&minus;3</sup> and
+                temperatures of 6&times;10<sup>9</sup>&nbsp;K and across the temperature range relevant for
+                thermonuclear burning.</li>
+                <li><b>Helmholtz equation of state:</b> pressure and internal energy of a degenerate, equal-mass
+                carbon&ndash;oxygen mixture; the first GPU implementation of this equation of state.</li>
+                <li><b>Monopole self-gravity:</b> instead of a full Poisson solve, uses the spherical symmetry of the
+                problem: mass is binned radially and the gravitational acceleration evaluated for every zone.</li>
+             </ul>
+                        <h4>Scaling-study setup</h4>
+                        <p>The benchmark is an ideal-gas sphere evolved for 1000 cycles with AMR enabled. Each MPI rank uses
+             either 64 OpenMP-enabled CPU cores or one A100 GPU, and the number of ranks is varied from 1 to 64 for
+             strong scaling and up to 512 for weak scaling. The weak-scaling efficiency loss at the largest runs comes
+             from global communication, which is where future optimization should focus.</p>
+                        <div class="cs-figures cs-figures--two">
+                            <figure class="cs-figure">
+                                <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                    <img src="assets/project_4/ares_snapshots.jpg" alt="Two slice plots of a white dwarf in AresPK: adaptive mesh density slice and ignition hotspot." loading="lazy">
+                                </button>
+                                <figcaption>Left: density slice of a white dwarf initialized with 7 AMR levels (ParaView). Right: the same star with an ignition hotspot set to 7&times;10<sup>9</sup>&nbsp;K (yt).</figcaption>
+                            </figure>
+                            <figure class="cs-figure">
+                                <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                    <img src="assets/project_4/ares_scaling.jpg" alt="Strong-scaling speedup and weak-scaling efficiency plots for CPU and GPU ranks." loading="lazy">
+                                </button>
+                                <figcaption>Strong-scaling speedup (top) and weak-scaling efficiency (bottom) on Chicoma for CPU ranks (64 cores each) and GPU ranks (one A100 each).</figcaption>
+                            </figure>
                         </div>
-                        <div class="blog-card-content">
-                            <div class="blog-card-tags">
-                                <span>PHP</span><span>MySQL</span><span>Full-stack</span>
-                            </div>
-                            <h3>Omacha Shop E-Commerce</h3>
-                            <p>A comprehensive toy e-commerce platform designed for a fun shopping experience and
-                                powerful admin tools.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/TranHuuDat2004/Omacha_Shop" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="https://tranhuudat2004.github.io/Omacha-Shop-Demo/" target="_blank" aria-label="Live Demo"><i class="fas fa-link"></i></a>
-                            </div>
                         </div>
+                    </details>
+                    <div class="cs-links">
+                        <a class="cs-link" href="https://github.com/lanl/AresPK" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code on GitHub</a>
+                        <a class="cs-link" href="assets/project_4/SCPoster_web.jpg" target="_blank" rel="noopener"><i class="fas fa-image"></i> Full poster</a>
+                        <a class="cs-link" href="https://lanl.github.io/cdss/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Co-Design Summer School</a>
+                    </div>
+                </article>
+                <article id="rotating-ppisn" class="case-study glass-card animate-on-scroll">
+                    <header class="cs-header">
+                        <p class="cs-eyebrow"><span class="cs-num">03</span> How spinning stars throw off their outer layers</p>
+                        <h2>Rotational Dynamics in Pulsational Pair-instability Supernovae: Implications for Mass Loss and Transient Events</h2>
+                        <p class="cs-meta"><span>Co-author</span><span class="cs-meta-sep">&middot;</span><span>Louisiana State University</span><span class="cs-meta-sep">&middot;</span><span>T.&nbsp;N.&nbsp;Huynh, E.&nbsp;Chatzopoulos &amp; N.&nbsp;Zaman</span><span class="cs-meta-sep">&middot;</span><span><em>ApJ</em> 991, 12 (Sept 2025)</span></p>
+                    </header>
+                    <dl class="cs-facts">
+                        <div><dt>Codes</dt><dd>MESA &middot; STELLA &middot; SuperLite &middot; Duperfit &middot; Python</dd></div>
+                        <div><dt>Scale</dt><dd>33 rotating models of 85&nbsp;M<sub>&#9737;</sub> and up, at 0.1&nbsp;Z<sub>&#9737;</sub> and Z<sub>&#9737;</sub>, rotation up to 70% of break-up</dd></div>
+                        <div><dt>Output</dt><dd><em>The Astrophysical Journal</em> 991, 12 (2025)</dd></div>
+                    </dl>
+                    <div class="cs-body">
+                        <h3>The question</h3>
+                        <p>Stars with helium cores of roughly 32&ndash;65 solar masses become unstable to electron&ndash;positron
+            pair production late in their lives. Instead of exploding at once, they go through violent pulses that
+            eject shells of material: pulsational pair-instability supernovae (PPISNe). When a later shell catches an
+            earlier one, the collision can power a bright transient. We asked how stellar rotation changes the pulses,
+            and what the colliding shells would look like to a telescope.</p>
+                        <h3>Approach</h3>
+                        <ul class="cs-list">
+                            <li>Evolved very massive stars with <b>MESA</b> at rotation rates of 0&ndash;70% of break-up, following every pulse through to core collapse.</li>
+                            <li>Measured the number, energy, velocity, timing and composition of the ejected shells and how they correlate.</li>
+                            <li>For a rotating 95&nbsp;M<sub>&#9737;</sub> model, followed the collision of its first two shells with <b>STELLA</b> and computed its spectra with <b>SuperLite</b>, then compared them with observed supernovae using <b>Duperfit</b>.</li>
+                        </ul>
+                        <h3>Key results</h3>
+                        <ul class="cs-list cs-list--results">
+                            <li><b>Faster rotation reduces mass loss in the pulses:</b> an 85&nbsp;M<sub>&#9737;</sub> star at 70% of break-up ejects 2.95&nbsp;M<sub>&#9737;</sub>, compared with 7.5&nbsp;M<sub>&#9737;</sub> at 20%.</li>
+                            <li><b>Rotation lowers the mass threshold:</b> a rotating 90&nbsp;M<sub>&#9737;</sub> star builds a 55&nbsp;M<sub>&#9737;</sub> helium core and pulsates, which a non-rotating star needs ~123&nbsp;M<sub>&#9737;</sub> to do.</li>
+                            <li>Across the 33 models, ejected mass and shell energy are tightly correlated (<b>r&nbsp;&asymp;&nbsp;0.95</b>), while faster rotation goes with less ejected mass (r&nbsp;&asymp;&nbsp;&minus;0.64). Later pulses are hydrogen-poor and carbon/oxygen-rich (62% oxygen in the second pulse of the 95&nbsp;M<sub>&#9737;</sub> model), and come only ~26 days apart, so collisions are likely.</li>
+                            <li>The two-shell collision produces a <b>moderately luminous hydrogen-poor transient</b> peaking at ~4.8&ndash;6.3&times;10<sup>42</sup>&nbsp;erg&nbsp;s<sup>&minus;1</sup> and staying bright for ~50 days: similar to Type Ib/c supernovae such as SN&nbsp;1994I and sharing some spectral features with SLSNe-I, but fainter, so the brightest SLSNe likely need an extra power source such as a magnetar.</li>
+                        </ul>
+                        <h3>My contribution</h3>
+                        <p>I did the spectroscopic analysis: ran the SuperLite radiative-transfer simulations on LSU&rsquo;s HPC cluster, produced and plotted the synthetic spectral series, and compared them with observed supernovae using Duperfit.</p>
+                    </div>
+                    <div class="cs-figures cs-figures--two">
+                        <figure class="cs-figure">
+                            <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                <img src="assets/project_2/ppisn_correlation_matrix.jpg" alt="Correlation matrix of stellar and pulse parameters across 33 models." loading="lazy">
+                            </button>
+                            <figcaption>Correlations between initial mass, helium-core mass, rotation rate, ejected mass, peak shell velocity, pulse interval and ejected energy across the 33 models (paper Fig. 1).</figcaption>
+                        </figure>
+                        <figure class="cs-figure">
+                            <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                <img src="assets/project_2/ppisn_collision_lightcurve.jpg" alt="Bolometric light curve of the two-shell collision for the rotating 95 solar-mass model." loading="lazy">
+                            </button>
+                            <figcaption>Bolometric light curve of the collision between the first two shells of the 95&nbsp;M<sub>&#9737;</sub>, &Omega;/&Omega;<sub>crit</sub>&nbsp;=&nbsp;0.5 model, for two ways of setting up the collision; time is measured from the first ejection (paper Fig. 11).</figcaption>
+                        </figure>
+                    </div>
+                    <details class="cs-deep">
+                        <summary><span>Technical deep dive</span><i class="fas fa-chevron-down"></i></summary>
+                        <div class="cs-deep-body">
+                        <h4>Stellar models</h4>
+                        <p>Models were evolved with MESA r24.03.1 from the zero-age main sequence to core-helium depletion
+             and then through the pair-instability phase with MESA&rsquo;s HLLC hydrodynamics, which switches on when the
+             star approaches dynamical instability. All unbound ejecta are kept and followed through later pulses.
+             Convection uses the Ledoux criterion with exponential overshooting, and winds follow the Brott et&nbsp;al.
+             (2011) prescription. Rotation rates of &Omega;/&Omega;<sub>crit</sub>&nbsp;=&nbsp;0, 0.2, 0.5 and 0.7 were
+             explored at 10% solar metallicity, plus a few solar-metallicity models.</p>
+                        <h4>Shell collision light curve</h4>
+                        <p>The first and second ejections of the rotating 95&nbsp;M<sub>&#9737;</sub> model are mapped into STELLA.
+             The first pulse is evolved for 100 days; the second is then propagated until it reaches the first,
+             assuming homologous expansion, and the collision is followed with radiation hydrodynamics. The first pulse
+             (0.78&nbsp;M<sub>&#9737;</sub>, ~1.8&times;10<sup>49</sup>&nbsp;erg) would peak near 10<sup>41</sup>&nbsp;erg&nbsp;s<sup>&minus;1</sup>;
+             the second (4&nbsp;M<sub>&#9737;</sub>, ~7.8&times;10<sup>49</sup>&nbsp;erg), launched ~26 days later, catches it within
+             ~14 days, and the collision produces the brightest of the three signals, more than a century before core
+             collapse.</p>
+                        <h4>Spectral synthesis (my part)</h4>
+                        <p>STELLA profiles from 10 days before to 30 days after peak were truncated at a Rosseland optical depth
+             of 100 and post-processed with SuperLite using ~10<sup>6</sup> (2<sup>20</sup>) Monte Carlo source
+             particles and 6000 wavelength groups from 1 to 30,000&nbsp;&Aring;, with NLTE level populations for
+             hydrogen. Before peak the spectra show broad C&nbsp;II and O&nbsp;II emission and a P-Cygni feature near
+             6600&nbsp;&Aring;; after peak, as the ejecta cool, absorption from O&nbsp;IV, Mg&nbsp;I, O&nbsp;V/N&nbsp;V and
+             C&nbsp;II takes over.</p>
+                        <h4>Comparison with observed supernovae</h4>
+                        <p>Duperfit, a Python implementation of the Superfit template method, fits a spectrum as supernova plus
+             host-galaxy light with reddening. I applied artificial redshifts of 0.01&ndash;0.1 to the model spectra
+             and searched 0.03&nbsp;&le;&nbsp;z&nbsp;&le;&nbsp;0.17 with A<sub>V</sub> from &minus;2 to 2. The closest
+             templates include SN&nbsp;2005bf and SN&nbsp;1994I before peak, the SLSN-I PTF12dam and SN&nbsp;2007bi after
+             peak, and the fast transients AT2018cow and SN&nbsp;2002bj, which share He&nbsp;I/He&nbsp;II lines. These
+             are nearest matches for context, not quantitative best fits.</p>
+                        <div class="cs-figures cs-figures--two">
+                            <figure class="cs-figure">
+                                <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                    <img src="assets/project_2/ppisn_spectra_evolution.jpg" alt="Synthetic spectra of the shell collision from 12 days before to 27 days after peak." loading="lazy">
+                                </button>
+                                <figcaption>Synthetic spectra of the H-poor shell collision from &minus;12 to +27 days around peak, computed with SuperLite (paper Fig. 13).</figcaption>
+                            </figure>
+                            <figure class="cs-figure">
+                                <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                    <img src="assets/project_2/ppisn_duperfit_comparison.jpg" alt="Model spectra compared with best-matching observed supernova spectra from Duperfit." loading="lazy">
+                                </button>
+                                <figcaption>Model spectra (black) at &minus;12 and +2 days with the nearest Duperfit templates: SN&nbsp;2005bf, SN&nbsp;1994I, AT2018cow, PTF12dam, SN&nbsp;2007bi and SN&nbsp;2002bj (paper Fig. 14).</figcaption>
+                            </figure>
+                        </div>
+                        </div>
+                    </details>
+                    <div class="cs-links">
+                        <a class="cs-link" href="https://iopscience.iop.org/article/10.3847/1538-4357/adf4e7/meta" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Read the paper</a>
+                        <a class="cs-link" href="https://arxiv.org/abs/2507.21307" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> arXiv</a>
+                        <a class="cs-link" href="https://doi.org/10.5281/zenodo.15620230" target="_blank" rel="noopener"><i class="fas fa-database"></i> MESA inlists (Zenodo)</a>
+                    </div>
+                </article>
+                <article id="slsn-powering" class="case-study glass-card animate-on-scroll">
+                    <header class="cs-header">
+                        <p class="cs-eyebrow"><span class="cs-num">04</span> What powers the brightest supernovae?</p>
+                        <h2>Constraining the Powering Mechanisms of Superluminous Supernovae</h2>
+                        <p class="cs-meta"><span>PhD research, in progress</span><span class="cs-meta-sep">&middot;</span><span>Louisiana State University</span><span class="cs-meta-sep">&middot;</span><span>Advisor: Dr. Emmanouil Chatzopoulos</span><span class="cs-meta-sep">&middot;</span><span>Started Jan 2026</span></p>
+                    </header>
+                    <dl class="cs-facts">
+                        <div><dt>Codes</dt><dd>TigerFit &middot; MESA &middot; STELLA &middot; SuperLite &middot; Python</dd></div>
+                        <div><dt>Data</dt><dd>Public light curves of nearby SLSNe-I, starting with SN&nbsp;2018bsz and SN&nbsp;2017egm</dd></div>
+                        <div><dt>Status</dt><dd>Ongoing</dd></div>
+                    </dl>
+                    <div class="cs-body">
+                        <h3>The question</h3>
+                        <p>What powers SLSNe is still debated: a rapidly spinning magnetar, interaction with circumstellar
+            material, large amounts of radioactive nickel, or a mix. Semi-analytic light-curve fits often allow
+            more than one answer. I am combining such fits with physically consistent progenitor and explosion
+            models to narrow down the power source event by event. This builds directly on the two projects above.</p>
+                        <h3>Approach</h3>
+                        <ul class="cs-list">
+                            <li>Fit observed bolometric light curves with <b>TigerFit</b>, a semi-analytic fitting tool, to get first estimates of ejecta mass, explosion energy and CSM properties.</li>
+                            <li>Build <b>MESA</b> progenitors consistent with those estimates.</li>
+                            <li>Run <b>STELLA</b> and <b>SuperLite</b> with different circumstellar environments and test which ones reproduce the observed light curves and spectra.</li>
+                        </ul>
+                        <h3>Current status</h3>
+                        <ul class="cs-list cs-list--results">
+                            <li>First targets are SN&nbsp;2018bsz and SN&nbsp;2017egm, two of the nearest known SLSNe-I, with well-sampled light curves.</li>
+                            <li>Results will be added here as the project progresses.</li>
+                        </ul>
+                        <h3>My contribution</h3>
+                        <p>Leading the project: light-curve fitting, model building and simulations.</p>
+                    </div>
+                    <div class="cs-figures">
+                        <figure class="cs-figure">
+                            <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                <img src="assets/project_3/project_3_web.jpg" alt="Four-panel figure of SN2018bsz: discovery image, bolometric light curve, host and difference images, early light curve." loading="lazy">
+                            </button>
+                            <figcaption>SN&nbsp;2018bsz: discovery image, observed bolometric light curve (data from Zhu et&nbsp;al. 2023, ApJ 949, 23), host-galaxy reference and ATLAS difference images, and the early rise of the light curve.</figcaption>
+                        </figure>
                     </div>
 
-                    <!-- PROJECT 2: BrickShop -->
-                    <div class="blog-post-card glass-card animate-on-scroll">
-                        <div class="blog-card-image">
-                            <img src="assets/banner_brickshop.png" alt="BrickShop Homepage">
-                        </div>
-                        <div class="blog-card-content">
-                            <div class="blog-card-tags">
-                                <span>Node.js</span><span>Express.js</span><span>TailwindCSS</span>
-                            </div>
-                            <h3>BrickShop E-Commerce</h3>
-                            <p>A modern e-commerce hub for building block fans, developed with Node.js and a Tailwind
-                                CSS admin UI.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/TranHuuDat2004/BrickShop" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="#" aria-label="Project Details"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
+                    <div class="cs-links">
+                        <a class="cs-link" href="https://github.com/manolis07gr/TigerFit" target="_blank" rel="noopener"><i class="fab fa-github"></i> TigerFit</a>
                     </div>
-
-                    <!-- PROJECT 3: ZStyle -->
-                    <div class="blog-post-card glass-card animate-on-scroll">
-                        <div class="blog-card-image">
-                            <img src="assets/banner_zstyle.png" alt="ZStyle Homepage">
-                        </div>
-                        <div class="blog-card-content">
-                            <div class="blog-card-tags">
-                                <span>PHP</span><span>MySQL</span><span>Frontend</span>
-                            </div>
-                            <h3>ZStyle Fashion E-Commerce</h3>
-                            <p>Developed a basic clothing e-commerce website as part of a course project, implementing
-                                core features.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/TranHuuDat2004/ZStyle" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+                </article>
+                <article id="flosic-thesis" class="case-study glass-card animate-on-scroll">
+                    <header class="cs-header">
+                        <p class="cs-eyebrow"><span class="cs-num">05</span> Faster quantum-chemistry calculations</p>
+                        <h2>Accelerating the Fermi-L&ouml;wdin Orbital Descriptor Optimization for Self-Interaction-Free DFT Calculations</h2>
+                        <p class="cs-meta"><span>M.S. thesis, 2021</span><span class="cs-meta-sep">&middot;</span><span>Central Michigan University, Department of Physics</span><span class="cs-meta-sep">&middot;</span><span>Advisor: Dr. Juan Peralta, with Dr. Koblar Jackson</span></p>
+                    </header>
+                    <dl class="cs-facts">
+                        <div><dt>Code</dt><dd>FLOSIC (Fortran) &middot; Python</dd></div>
+                        <div><dt>Systems</dt><dd>HCN, C<sub>2</sub>H<sub>4</sub>, CH<sub>3</sub>F</dd></div>
+                        <div><dt>Output</dt><dd>M.S. thesis (2021)</dd></div>
+                    </dl>
+                    <div class="cs-body">
+                        <h3>The question</h3>
+                        <p>Approximate density functional theory (DFT) suffers from self-interaction error. The
+            Fermi-L&ouml;wdin self-interaction correction (FLO-SIC) removes it using orbitals defined by Fermi-orbital
+            descriptors (FODs), whose positions must be optimized. That optimization is expensive because the SIC
+            potentials are recalculated at every step. Could we skip that recalculation?</p>
+                        <h3>Approach</h3>
+                        <ul class="cs-list">
+                            <li>Developed a <b>Frozen Potential (FP)</b> variant of the FLOSIC code: the SIC potentials from the end of the self-consistent-field calculation are held fixed during FOD optimization.</li>
+                            <li>Compared the resulting approximate FOD forces with the exact FLO-SIC forces.</li>
+                            <li>Built force landscapes for HCN, C<sub>2</sub>H<sub>4</sub> and CH<sub>3</sub>F using both optimal and non-optimal reference potentials.</li>
+                        </ul>
+                        <h3>Key results</h3>
+                        <ul class="cs-list cs-list--results">
+                            <li>Approximate forces go to about zero at the optimal FOD positions, like the exact forces.</li>
+                            <li><b>Force-evaluation run time dropped by 72&ndash;86%</b> (72.0%, 82.5% and 85.7% for the three test cases).</li>
+                            <li>Limitation: for some bond and lone-pair FODs the approximate force has the opposite slope, so it cannot simply replace the exact force in a standard optimizer.</li>
+                        </ul>
+                        <h3>My contribution</h3>
+                        <p>Implemented the Frozen Potential method in the FLOSIC code, ran and analyzed all calculations, and wrote the thesis.</p>
                     </div>
-
-                    <!-- PROJECT 4: Unidoc -->
-                    <div class="blog-post-card glass-card animate-on-scroll">
-                        <div class="blog-card-image">
-                            <img src="assets/banner_unidoc.png" alt="Unidoc Homepage">
-                        </div>
-                        <div class="blog-card-content">
-                            <div class="blog-card-tags">
-                                <span>React</span><span>Tailwind CSS</span><span>Firebase</span>
-                            </div>
-                            <h3>Unidoc Document Hub</h3>
-                            <p>A comprehensive document hub designed to help university students easily manage, find,
-                                and share their study materials.</p>
-                            <div class="project-links">
-                                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="#" aria-label="Live Demo"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
+                    <div class="cs-figures cs-figures--two">
+                        <figure class="cs-figure">
+                            <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                <img src="assets/project_5/hcn_fod_positions.jpg" alt="HCN molecule showing atoms and the Fermi-orbital descriptor positions for three bonds and a lone pair." loading="lazy">
+                            </button>
+                            <figcaption>Atoms and FOD positions in HCN: three FODs describe the C&ndash;N triple bond and one the nitrogen lone pair.</figcaption>
+                        </figure>
+                        <figure class="cs-figure">
+                            <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                <img src="assets/project_5/flosic_flowchart.jpg" alt="Flowchart of the FLO-SIC self-consistent field and FOD optimization loop." loading="lazy">
+                            </button>
+                            <figcaption>The FLO-SIC workflow. The Frozen Potential method speeds up the inner force loop by not regenerating the SIC potentials at every step.</figcaption>
+                        </figure>
                     </div>
-
-                    <!-- PROJECT 5: Aptis Practice -->
-                    <div class="blog-post-card glass-card animate-on-scroll">
-                        <div class="blog-card-image">
-                            <img src="assets/banner_Aptis.png" alt="Aptis Practice UI">
+                    <details class="cs-deep">
+                        <summary><span>Technical deep dive</span><i class="fas fa-chevron-down"></i></summary>
+                        <div class="cs-deep-body">
+                        <h4>Why FODs are expensive</h4>
+                        <p>In FLO-SIC, each occupied orbital is replaced by a Fermi-L&ouml;wdin orbital built from a point in space,
+             its FOD. The total energy depends on where the FODs sit, so they are optimized by following the
+             &ldquo;FOD forces&rdquo; dE/da<sub>i</sub> downhill. In the standard code every force evaluation needs a new
+             set of orbital-dependent SIC potentials, which dominates the cost, especially for molecules with many
+             FODs where a run can take days.</p>
+                        <h4>The Frozen Potential idea and how it was tested</h4>
+                        <p>The FP code reuses the SIC potentials from the end of the self-consistent calculation and evaluates
+             approximate forces for displaced FODs without regenerating them. To test it, I moved one FOD at a time
+             through 10 positions along a chosen axis and computed exact and approximate forces at each, giving a
+             force landscape. This was done with reference potentials taken both at the optimal FOD positions and at
+             non-optimal ones, for core, bond and lone-pair FODs in all three molecules.</p>
+                        <h4>Timing</h4>
+                        <div class="cs-table-wrap"><table class="cs-table">
+                <thead><tr><th>FOD tested (10 positions)</th><th>FLO-SIC</th><th>Frozen Potential</th><th>Saving</th></tr></thead>
+                <tbody>
+                  <tr><td>Lone-pair FOD of CH<sub>3</sub>F, along z</td><td>9:54 min</td><td>1:45 min</td><td>82.5%</td></tr>
+                  <tr><td>C-core FOD of C<sub>2</sub>H<sub>4</sub>, along z</td><td>11:11 min</td><td>1:36 min</td><td>85.7%</td></tr>
+                  <tr><td>Bond FOD of HCN, along x</td><td>2:23 min</td><td>0:40 min</td><td>72.0%</td></tr>
+                </tbody>
+             </table></div>
+                        <h4>What it showed, and what comes next</h4>
+                        <p>For many FODs the approximate force tracks the exact one and crosses zero at the right place. For some
+             bond and lone-pair FODs it crosses zero at the right place but with the opposite slope, so a standard
+             minimizer could be pushed the wrong way. The thesis proposes transforming the forces (for example with a
+             Lorentzian) so that zeros always correspond to minima, together with a compatible approximate target
+             function. It is a proof of concept for faster FOD optimization, with its limits clearly mapped.</p>
+                        <div class="cs-figures cs-figures--two">
+                            <figure class="cs-figure">
+                                <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                    <img src="assets/project_5/force_ncore_hcn.png" alt="Force landscape for the nitrogen core FOD of HCN: exact and approximate forces agree in sign." loading="lazy">
+                                </button>
+                                <figcaption>N-core FOD of HCN: exact (red) and approximate (green) forces agree in sign and cross zero at the optimum.</figcaption>
+                            </figure>
+                            <figure class="cs-figure">
+                                <button class="cs-zoom" type="button" aria-label="Enlarge figure">
+                                    <img src="assets/project_5/force_bond_hcn.png" alt="Force landscape for a bond FOD of HCN: approximate force has the opposite slope." loading="lazy">
+                                </button>
+                                <figcaption>Bond FOD of HCN: both forces vanish at the optimum, but the approximate force has the opposite slope, the main limitation found.</figcaption>
+                            </figure>
                         </div>
-                        <div class="blog-card-content">
-                            <div class="blog-card-tags">
-                                <span>HTML5</span><span>CSS3</span><span>JS</span>
-                            </div>
-                            <h3>Aptis Practice Testing Tool</h3>
-                            <p>An interactive web tool built to solve a personal problem after a first attempt at the
-                                Aptis test.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/TranHuuDat2004/aptis-practice" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="https://tranhuudat2004.github.io/aptis-practice/" target="_blank" aria-label="Live Demo"><i class="fas fa-link"></i></a>
-                                <a href="https://www.figma.com/community/file/1622808499508850540/aptis-e-learning-exam-practice-platform-ui-aptis-practice" 
-                                    target="_blank" aria-label="Figma Design"><i class="fab fa-figma"></i></a>
-                            </div>
                         </div>
+                    </details>
+                    <div class="cs-links">
+                        <a class="cs-link" href="resources/Project_5_CMU_Thesis.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Read the thesis (PDF)</a>
+                        <a class="cs-link" href="https://github.com/FLOSIC/PublicRelease_2020" target="_blank" rel="noopener"><i class="fab fa-github"></i> FLOSIC code</a>
                     </div>
-
-                    <!-- PROJECT 6: Puzzle & Image Tools -->
-                    <div class="blog-post-card glass-card animate-on-scroll">
-                        <div class="blog-card-image">
-                            <img src="assets/home_game_tool.png" alt="Puzzle & Image Tools UI">
-                        </div>
-                        <div class="blog-card-content">
-                            <div class="blog-card-tags">
-                                <span>HTML5</span><span>CSS3</span><span>JS</span>
-                            </div>
-                            <h3>Puzzle & Image Tools Suite</h3>
-                            <p>An engaging web application that includes an interactive puzzle game and practical image
-                                processing tools.</p>
-                            <div class="project-links">
-                                <a href="https://tranhuudat2004.github.io/games_tools/" target="_blank" aria-label="Live Demo"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PROJECT 7: Signature Verification -->
-                    <div class="blog-post-card glass-card animate-on-scroll">
-                        <div class="blog-card-image">
-                            <img src="assets/home_handwriting.png" alt="Signature Verification Concept">
-                        </div>
-                        <div class="blog-card-content">
-                            <div class="blog-card-tags">
-                                <span>Python</span><span>TensorFlow</span><span>Keras</span>
-                            </div>
-                            <h3>Signature Verification</h3>
-                            <p>Developed a model to verify handwritten signatures using Machine Learning techniques in
-                                Google Colab.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/TranHuuDat2004/handwriting-signature-recognition" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+                </article>
                     </div>
                 </div>
-                <div class="hero-buttons">
-                    <a href="index.html" class="btn btn-secondary">
-                        <i class="fas fa-arrow-left"></i> Back to Home
-                    </a>
+
+                <div class="view-all-posts-container animate-on-scroll" style="margin-top: 3rem;">
+                    <a href="index.html#projects" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to home</a>
                 </div>
             </div>
-            
         </section>
     </main>
 
-    <footer id="footer-placeholder" class="main-footer"></footer>
+    <div class="cs-lightbox" hidden>
+        <button class="cs-lightbox-close" type="button" aria-label="Close">&times;</button>
+        <img src="" alt="">
+    </div>
 
-    <audio id="audio-source"></audio>
-    <script src="js/playlist.js"></script>
-    <script src="js/load-components.js"></script>
+    <footer id="footer-placeholder" class="main-footer"></footer>
     <script src="js/scripts.js"></script>
+    <script src="js/load-components.js"></script>
+    <script>
+        // Highlight the current project in the side menu
+        (function () {
+            const links = [...document.querySelectorAll('.cs-nav a')];
+            const byId = Object.fromEntries(links.map(a => [a.getAttribute('href').slice(1), a]));
+            const obs = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        links.forEach(a => a.classList.remove('active'));
+                        const a = byId[e.target.id];
+                        if (a) {
+                            a.classList.add('active');
+                            a.scrollIntoView({ block: 'nearest', inline: 'center' });
+                        }
+                    }
+                });
+            }, { rootMargin: '-35% 0px -60% 0px' });
+            document.querySelectorAll('.case-study').forEach(s => obs.observe(s));
+
+            // Click a figure to enlarge it
+            const box = document.querySelector('.cs-lightbox');
+            const boxImg = box.querySelector('img');
+            const close = () => { box.hidden = true; document.body.style.overflow = ''; };
+            document.querySelectorAll('.cs-zoom').forEach(btn => btn.addEventListener('click', () => {
+                const img = btn.querySelector('img');
+                boxImg.src = img.src; boxImg.alt = img.alt;
+                box.hidden = false; document.body.style.overflow = 'hidden';
+            }));
+            box.addEventListener('click', e => { if (e.target !== boxImg) close(); });
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+        })();
+    </script>
 </body>
 
 </html>
