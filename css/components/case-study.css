@@ -77,6 +77,7 @@
 }
 
 .case-study {
+    position: relative;
     padding: 2.25rem;
     scroll-margin-top: 7rem;
     border-top: 3px solid var(--gradient-green);
@@ -111,6 +112,27 @@
 .cs-meta-sep {
     margin: 0 0.5rem;
     color: var(--gradient-green);
+}
+
+.cs-card-institution-logo {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    display: block;
+    width: auto;
+    height: 2.5rem;
+    max-width: 6rem;
+    object-fit: contain;
+    flex: none;
+}
+
+.cs-card-institution-logo--square {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.cs-header {
+    padding-right: 7rem;
 }
 
 .cs-facts {
@@ -234,6 +256,15 @@
     width: 100%;
     max-height: 620px;
     object-fit: contain;
+}
+
+.cs-project-video {
+    display: block;
+    width: 100%;
+    max-height: 620px;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    background: #000;
 }
 
 .cs-figure figcaption {
@@ -368,6 +399,22 @@ mark.to-confirm {
 @media (max-width: 700px) {
     .case-study {
         padding: 1.4rem;
+    }
+
+    .cs-card-institution-logo {
+        top: 1rem;
+        right: 1rem;
+        height: 2rem;
+        max-width: 4.5rem;
+    }
+
+    .cs-card-institution-logo--square {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .cs-header {
+        padding-right: 5rem;
     }
 
     .cs-facts,

@@ -44,11 +44,7 @@
 .logo {
     font-weight: bold;
     font-size: 1.25rem;
-    color: var(--gradient-green);
-    /* Gradient color transfer to part of the name */
-    background: linear-gradient(to right, #0BDA51, var(--gradient-green));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-primary);
 }
 
 
@@ -88,10 +84,9 @@
 }
 
 .logo span {
-    background: linear-gradient(to right, #009000, #39FF14);
+    color: var(--text-primary);
     padding: 0.5rem 1rem;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: var(--text-primary);
 }
 
 .main-nav {
@@ -148,4 +143,58 @@
 .resume-button:hover {
     transform: scale(1.05);
     color: #121212;
+}
+
+/* Shared Resume/CV dropdowns */
+.document-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.document-dropdown > summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.document-dropdown > summary::-webkit-details-marker {
+    display: none;
+}
+
+.document-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    z-index: 1001;
+    min-width: 100%;
+    padding: 0.35rem;
+    background: rgba(24, 24, 27, 0.98);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.header-navigation .document-dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.document-dropdown-menu a {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.45rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.document-dropdown-menu a:hover,
+.document-dropdown-menu a:focus-visible {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.about-document-dropdown {
+    display: block;
+    width: 100%;
 }

@@ -5,6 +5,7 @@
     position: relative;
     max-width: 860px;
     margin: 0 auto;
+    --edu-marker-center: 28px;
 }
 
 .edu-timeline::before {
@@ -12,14 +13,14 @@
     position: absolute;
     top: 0.5rem;
     bottom: 0.5rem;
-    left: 11px;
+    left: calc(var(--edu-marker-center) - 1px);
     width: 2px;
     background: linear-gradient(to bottom, var(--gradient-green), var(--border-color));
 }
 
 .edu-item {
     position: relative;
-    padding-left: 44px;
+    padding-left: 68px;
     margin-bottom: 1.5rem;
 }
 
@@ -31,12 +32,44 @@
     position: absolute;
     left: 0;
     top: 1.4rem;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
+    width: 56px;
+    height: 40px;
+    border-radius: 10px;
     background: var(--bg-dark);
-    border: 3px solid var(--border-color);
+    border: 2px solid var(--border-color);
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
+.edu-dot img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.edu-dot--square {
+    left: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+.edu-dot--pair {
+    gap: 0.2rem;
+}
+
+.edu-dot--pair img {
+    width: 46%;
+}
+
+.edu-dot i {
+    color: var(--gradient-green);
+    font-size: 1.1rem;
 }
 
 .edu-item--current .edu-dot {
@@ -117,17 +150,24 @@
 }
 
 @media (max-width: 640px) {
-    .edu-item {
-        padding-left: 34px;
+    .edu-timeline {
+        --edu-marker-center: 24px;
     }
 
-    .edu-timeline::before {
-        left: 9px;
+    .edu-item {
+        padding-left: 60px;
     }
 
     .edu-dot {
-        width: 20px;
-        height: 20px;
+        width: 48px;
+        height: 36px;
+        border-radius: 9px;
+    }
+
+    .edu-dot--square {
+        left: 6px;
+        width: 36px;
+        height: 36px;
     }
 
     .edu-years {

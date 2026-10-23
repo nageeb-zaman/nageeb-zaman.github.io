@@ -3,6 +3,59 @@
 /* ====================================================== */
 .content-section {
     padding: 6rem 0;
+    --section-edge-fade: linear-gradient(
+        to bottom,
+        var(--bg-dark) 0,
+        rgba(18, 18, 18, 0) 9rem,
+        rgba(18, 18, 18, 0) calc(100% - 9rem),
+        var(--bg-dark) 100%
+    );
+    background-color: var(--bg-dark);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about {
+    background-image:
+        var(--section-edge-fade),
+        linear-gradient(180deg, rgba(18, 18, 18, 0.78), rgba(18, 18, 18, 0.88)),
+        url('../../assets/about_me_background.jpg');
+}
+
+#projects {
+    background-image:
+        var(--section-edge-fade),
+        linear-gradient(180deg, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.9)),
+        url('../../assets/Projects_Research_background.jpg');
+}
+
+#background {
+    background-image:
+        var(--section-edge-fade),
+        linear-gradient(180deg, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.9)),
+        url('../../assets/Education_Experience_background.jpg');
+}
+
+#skills {
+    background-image:
+        var(--section-edge-fade),
+        linear-gradient(180deg, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.9)),
+        url('../../assets/Technial_skills_background.jpg');
+}
+
+#publications {
+    background-image:
+        var(--section-edge-fade),
+        linear-gradient(180deg, rgba(18, 18, 18, 0.78), rgba(18, 18, 18, 0.9)),
+        url('../../assets/Publicatons_Awards_background.jpg');
+}
+
+#contact {
+    background-image:
+        var(--section-edge-fade),
+        linear-gradient(180deg, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.9)),
+        url('../../assets/contact_background.jpg');
 }
 
 .section-header {

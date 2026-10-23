@@ -3,8 +3,14 @@
 /* ====================================================== */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 2rem;
+    grid-template-columns: minmax(0, 640px);
+    justify-content: center;
+}
+
+.contact-email-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .contact-info-wrapper h3 {

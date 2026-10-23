@@ -124,7 +124,7 @@ window.fetchGitHubStars = async function() {
 
 // 0.5 Parallax Effect for Hero
 window.initParallax = function() {
-    const hero = document.getElementById('hero');
+    const hero = document.getElementById('home_page');
     if (!hero) return;
 
     const heroBg = hero.querySelector('.hero-background');
@@ -165,6 +165,51 @@ window.initParallax = function() {
 // --- MAIN LOGIC ---
 // ======================================================
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Play the first project video preview only while its card is hovered or focused.
+    document.querySelectorAll('.research-card-preview').forEach((video) => {
+        const card = video.closest('.research-card');
+        if (!card) return;
+
+        const startPreview = () => {
+            video.play().catch(() => {});
+        };
+        const stopPreview = () => {
+            video.pause();
+            video.currentTime = 0;
+        };
+
+        card.addEventListener('mouseenter', startPreview);
+        card.addEventListener('mouseleave', stopPreview);
+        card.addEventListener('focusin', startPreview);
+        card.addEventListener('focusout', stopPreview);
+    });
+
+    // Pause the project detail video after it has scrolled out of view.
+    document.querySelectorAll('.cs-project-video').forEach((video) => {
+        let hasBeenVisible = false;
+        const videoObserver = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                hasBeenVisible = true;
+            } else if (hasBeenVisible || entry.boundingClientRect.bottom < 0) {
+                video.pause();
+            }
+        }, { threshold: 0.1 });
+
+        videoObserver.observe(video);
+    });
+
+    // Close Resume/CV dropdowns when clicking elsewhere on the page.
+    document.addEventListener('click', (event) => {
+        const clickedDropdown = event.target.closest('.document-dropdown');
+        const clickedSummary = event.target.closest('.document-dropdown > summary');
+
+        document.querySelectorAll('.document-dropdown[open]').forEach((dropdown) => {
+            if (dropdown !== clickedDropdown || !clickedSummary) {
+                dropdown.open = false;
+            }
+        });
+    });
 
     // Khởi tạo các logic cơ bản
     window.initScrollAnimations();

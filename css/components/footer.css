@@ -12,10 +12,8 @@
 
 .footer-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    /* Layout 3 cột */
-    gap: 3rem;
-    /* Khoảng cách giữa các cột */
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 2rem;
     padding-bottom: 3rem;
 }
 
@@ -26,24 +24,35 @@
     margin-bottom: 1.5rem;
 }
 
-/* Cột 1: Giới thiệu */
-.footer-logo {
-    font-weight: bold;
-    font-size: 1.5rem;
+/* Literary quote in the footer */
+.footer-quote {
+    position: relative;
+    max-width: 760px;
+    margin: 0;
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    border-left: 2px solid var(--gradient-green);
+}
+
+.footer-quote blockquote p {
+    margin: 0;
     color: var(--text-primary);
-    margin-bottom: 1rem;
-    padding-right: 400px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    font-style: italic;
+    line-height: 1.75;
 }
 
-.footer-logo span {
-    background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.footer-quote figcaption {
+    margin-top: 1rem;
+    color: var(--gradient-green);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.footer-about p {
-    max-width: 300px;
-    line-height: 1.7;
+.footer-quote cite {
+    font-style: normal;
 }
 
 /* Cột 2 & 3: Links */
@@ -89,18 +98,14 @@
         /* Căn giữa nội dung */
     }
 
-    .footer-about p {
+    .footer-quote {
         margin: 0 auto;
-        /* Căn giữa đoạn text */
+        text-align: left;
     }
 
     .footer-column ul a {
         justify-content: center;
         /* Căn giữa các item link */
-    }
-
-    .footer-logo {
-        padding-right: 40px;
     }
 
     .skills-wrapper {
