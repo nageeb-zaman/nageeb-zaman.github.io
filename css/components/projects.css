@@ -300,3 +300,138 @@
         width: 100%;
     }
 }
+
+
+/* ====================================================== */
+/* --- MORE PROJECTS (smaller course/personal projects) --- */
+/* ====================================================== */
+.more-projects {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.more-projects-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.more-projects-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.more-projects-title i {
+    color: var(--gradient-green);
+    margin-right: 0.35rem;
+}
+
+.more-projects-sub {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.mini-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.mini-card {
+    display: flex;
+    width: min(100%, 760px);
+    padding: 0;
+    overflow: hidden;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-left: 3px solid var(--gradient-green);
+}
+
+.mini-card:hover {
+    color: var(--text-primary);
+}
+
+.mini-card-media {
+    flex: 0 0 34%;
+    overflow: hidden;
+    background: #000;
+}
+
+.mini-card-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.mini-card:hover .mini-card-media img {
+    transform: scale(1.04);
+}
+
+.mini-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding: 1.2rem 1.3rem 1.3rem;
+}
+
+.mini-card-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.mini-card h4 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-bottom: 0.55rem;
+}
+
+.mini-card-hook {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 0.85rem;
+}
+
+.mini-card-link,
+.more-projects-all {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gradient-green);
+    text-decoration: none;
+}
+
+.mini-card-link {
+    margin-top: auto;
+}
+
+.more-projects-all {
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
+.more-projects-all:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .mini-card {
+        flex-direction: column;
+    }
+
+    .mini-card-media {
+        flex: none;
+        aspect-ratio: 16 / 10;
+    }
+
+    .mini-card-media img {
+        min-height: 0;
+    }
+}
